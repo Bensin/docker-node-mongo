@@ -14,7 +14,11 @@ app.use(express.static(__dirname+"/public"));
 const mongoose = require('mongoose');
 const DB_URL = "mongo://mongo:27017/todoApp";
 
-mongoose.connect(DB_URL).then(()=>{
-    app.listen(PORT);
+app.listen(PORT,()=>{
     console.log(`Listening on port`);
 });
+
+// mongoose.connect(DB_URL).then(()=>{
+//     app.listen(PORT);
+//     console.log(`Listening on port`);
+// });
